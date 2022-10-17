@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="entrega" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="59bbe7c9-a1d1-4f15-8fcf-a274d8d358ba">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT idcliente,
+	idvenda,
+	valortotal,
+	`idDataCaixa`,
+	dataentrega,
+	datapedido,
+	localidade,
+	status
+FROM projeto.pedido]]>
+	</queryString>
+	<field name="idcliente" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idcliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="idcliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pedido"/>
+	</field>
+	<field name="idvenda" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idvenda"/>
+		<property name="com.jaspersoft.studio.field.label" value="idvenda"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pedido"/>
+	</field>
+	<field name="valortotal" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.name" value="valortotal"/>
+		<property name="com.jaspersoft.studio.field.label" value="valortotal"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pedido"/>
+	</field>
+	<field name="idDataCaixa" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="idDataCaixa"/>
+		<property name="com.jaspersoft.studio.field.label" value="idDataCaixa"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pedido"/>
+	</field>
+	<field name="dataentrega" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="dataentrega"/>
+		<property name="com.jaspersoft.studio.field.label" value="dataentrega"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pedido"/>
+	</field>
+	<field name="datapedido" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="datapedido"/>
+		<property name="com.jaspersoft.studio.field.label" value="datapedido"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pedido"/>
+	</field>
+	<field name="localidade" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="localidade"/>
+		<property name="com.jaspersoft.studio.field.label" value="localidade"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pedido"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="status"/>
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pedido"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="19" width="370" height="40" backcolor="#DBF9FF" uuid="21758af4-40c2-4fa9-b8b0-407b8201e468"/>
+				<box>
+					<pen lineWidth="1.5" lineStyle="Double"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Vendas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="57" splitType="Stretch">
+			<staticText>
+				<reportElement x="280" y="20" width="61" height="21" uuid="c2bcf34f-b185-4be0-b343-38915104abbc"/>
+				<text><![CDATA[Data Entrega]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="18" width="61" height="21" uuid="dab4796c-4cf0-4e41-8619-6a53642e5b98"/>
+				<text><![CDATA[Static Text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="18" width="61" height="21" uuid="be7aa664-1d46-4257-965c-90f530b75d2f"/>
+				<text><![CDATA[Static Text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="18" width="61" height="21" uuid="b5ef6707-9cd2-483c-a3e9-c632adf84886"/>
+				<text><![CDATA[Static Text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="20" width="61" height="21" uuid="1d4def5e-8a56-4148-a62e-48b0d6c5f9ff"/>
+				<text><![CDATA[valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="20" width="61" height="21" uuid="6fba2a30-289e-4260-b1d5-8a565d636f30"/>
+				<text><![CDATA[caixa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="20" width="61" height="21" uuid="1b651e5e-4d34-40b8-985a-c82c46b1b067"/>
+				<text><![CDATA[Codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="18" width="61" height="21" uuid="d52549cb-95c2-406f-ae87-9919aaf447ca"/>
+				<text><![CDATA[cliente]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="-1" y="0" width="72" height="30" uuid="cfe7d825-1df9-4635-84e7-a46e6c16540f"/>
+				<textFieldExpression><![CDATA[$F{idcliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="73" y="0" width="69" height="30" uuid="03362d59-63fd-47a9-b2f8-0073dc7d702c"/>
+				<textFieldExpression><![CDATA[$F{idvenda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="0" width="69" height="30" uuid="ca4b16f1-d99e-46f7-b645-307baf2b87ea"/>
+				<textFieldExpression><![CDATA[$F{valortotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="211" y="0" width="69" height="30" uuid="00bd3fc5-40c8-47c3-9118-36b2cd21508a"/>
+				<textFieldExpression><![CDATA[$F{idDataCaixa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="0" width="69" height="30" uuid="54c5519e-918c-4da0-bb35-c52ce60abd3d"/>
+				<textFieldExpression><![CDATA[$F{dataentrega}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="69" height="30" uuid="e95e2ee4-9a88-480c-897e-8c303e472997"/>
+				<textFieldExpression><![CDATA[$F{datapedido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="0" width="69" height="30" uuid="7769ea12-9401-460b-b740-5bdf00de5d2d"/>
+				<textFieldExpression><![CDATA[$F{localidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="493" y="0" width="69" height="30" uuid="dccd537e-7048-4c75-a0bf-41a6f50d7aac"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

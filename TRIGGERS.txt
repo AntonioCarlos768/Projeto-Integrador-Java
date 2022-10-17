@@ -1,0 +1,50 @@
+DROP TRIGGER IF EXISTS `projeto`.`itemcompra_AFTER_INSERT`;
+
+DELIMITER $$
+USE `projeto`$$
+CREATE DEFINER=`root`@`localhost` TRIGGER `itemcompra_AFTER_INSERT` AFTER INSERT ON `itemcompra` FOR EACH ROW BEGIN
+update producao set quantidade = quantidade  + new.quantidade
+     where idproducao=new.idproducao;
+END$$
+DELIMITER ;
+
+
+
+
+DELIMITER $$
+USE `projeto`$$
+CREATE DEFINER = CURRENT_USER TRIGGER `projeto`.`itementrega_AFTER_UPDATE` AFTER UPDATE ON `itementrega` FOR EACH ROW
+BEGIN
+     update produto set quantidade = quantidade + old.quantidade - new.quantidade
+     where id=new.idproduto;
+END$$
+DELIMITER ;
+DROP TRIGGER IF EXISTS `projeto`.`sangria_AFTER_INSERT`;
+
+
+
+DELIMITER $$
+USE `projeto`$$
+CREATE DEFINER = CURRENT_USER TRIGGER `projeto`.`sangria_AFTER_INSERT` AFTER INSERT ON `sangria` FOR EACH ROW
+BEGIN
+update caixa c 
+set c.valorabertura = c.valorabertura - new.valor, 
+c.totalsaida = c.totalsaida + new.valor 
+where c.idDataCaixa = new.idDataCaixa;
+END$$
+DELIMITER ;
+
+
+
+DELIMITER $$
+USE `projeto`$$
+CREATE DEFINER=`root`@`localhost` TRIGGER `pedido_AFTER_UPDATE` AFTER UPDATE ON `pedido` FOR EACH ROW BEGIN
+
+update pedido p
+set p.valortotal = p.valortotal + new.valortotal
+where p.idvenda= new.idvenda;
+
+END$$
+DELIMITER ;
+
+
